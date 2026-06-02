@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.core.annotation.Order;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 @Component
+@Order(1)
 public class SaveSyncStartupRunner implements ApplicationRunner {
     private static final Logger log = LoggerFactory.getLogger(SaveSyncStartupRunner.class);
 

@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -99,24 +101,43 @@ public class DocsJsonImportService {
             throw new BadRequestException("Docs.json file is required.");
         }
         try (InputStream in = file.getInputStream()) {
-            JsonNode root = objectMapper.readTree(in);
-            if (!root.isArray()) {
-                throw new BadRequestException("Docs.json root must be an array.");
-            }
-
-            Map<String, String> classToMaterialKey = new HashMap<>();
-            Map<String, MaterialType> materialTypes = new HashMap<>();
-
-            int machineCount = seedBaseMachines();
-            int materialCount = importMaterials(root, classToMaterialKey, materialTypes);
-            int recipeCount = importRecipes(root, classToMaterialKey, materialTypes, gameVersion == null || gameVersion.isBlank() ? "Docs.json" : gameVersion.trim());
-
-            return new MessageResponse("Docs.json import completed: materials=" + materialCount + ", machines=" + machineCount + ", recipes=" + recipeCount + ". Refresh the frontend after import.");
+            return importDocsJsonRoot(objectMapper.readTree(in), gameVersion == null || gameVersion.isBlank() ? "Docs.json" : gameVersion.trim());
         } catch (BadRequestException e) {
             throw e;
         } catch (Exception e) {
             throw new BadRequestException("Failed to import Docs.json: " + e.getMessage());
         }
+    }
+
+    public MessageResponse importDocsJson(Path path, String gameVersion) {
+        if (path == null) {
+            throw new BadRequestException("Docs.json path is required.");
+        }
+        if (!Files.exists(path)) {
+            throw new BadRequestException("Docs.json path does not exist: " + path);
+        }
+        try (InputStream in = Files.newInputStream(path)) {
+            return importDocsJsonRoot(objectMapper.readTree(in), gameVersion == null || gameVersion.isBlank() ? path.getFileName().toString() : gameVersion.trim());
+        } catch (BadRequestException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new BadRequestException("Failed to import Docs.json from " + path + ": " + e.getMessage());
+        }
+    }
+
+    private MessageResponse importDocsJsonRoot(JsonNode root, String gameVersion) {
+        if (!root.isArray()) {
+            throw new BadRequestException("Docs.json root must be an array.");
+        }
+
+        Map<String, String> classToMaterialKey = new HashMap<>();
+        Map<String, MaterialType> materialTypes = new HashMap<>();
+
+        int machineCount = seedBaseMachines();
+        int materialCount = importMaterials(root, classToMaterialKey, materialTypes);
+        int recipeCount = importRecipes(root, classToMaterialKey, materialTypes, gameVersion);
+
+        return new MessageResponse("Docs.json import completed: materials=" + materialCount + ", machines=" + machineCount + ", recipes=" + recipeCount + ". Refresh the frontend after import.");
     }
 
     private int seedBaseMachines() {

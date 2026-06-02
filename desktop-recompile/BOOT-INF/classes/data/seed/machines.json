@@ -1,0 +1,107 @@
+[
+  {
+    "gameKey": "miner",
+    "name": "Miner",
+    "machineType": "MINER",
+    "powerMw": 5,
+    "enabled": true
+  },
+  {
+    "gameKey": "water_extractor",
+    "name": "Water Extractor",
+    "machineType": "WATER_EXTRACTOR",
+    "powerMw": 20,
+    "enabled": true
+  },
+  {
+    "gameKey": "oil_extractor",
+    "name": "Oil Extractor",
+    "machineType": "OTHER",
+    "powerMw": 40,
+    "enabled": true
+  },
+  {
+    "gameKey": "resource_well_extractor",
+    "name": "Resource Well Extractor",
+    "machineType": "OTHER",
+    "powerMw": 0,
+    "enabled": true
+  },
+  {
+    "gameKey": "smelter",
+    "name": "Smelter",
+    "machineType": "SMELTER",
+    "powerMw": 4,
+    "enabled": true
+  },
+  {
+    "gameKey": "foundry",
+    "name": "Foundry",
+    "machineType": "FOUNDRY",
+    "powerMw": 16,
+    "enabled": true
+  },
+  {
+    "gameKey": "constructor",
+    "name": "Constructor",
+    "machineType": "CONSTRUCTOR",
+    "powerMw": 4,
+    "enabled": true
+  },
+  {
+    "gameKey": "assembler",
+    "name": "Assembler",
+    "machineType": "ASSEMBLER",
+    "powerMw": 15,
+    "enabled": true
+  },
+  {
+    "gameKey": "manufacturer",
+    "name": "Manufacturer",
+    "machineType": "MANUFACTURER",
+    "powerMw": 55,
+    "enabled": true
+  },
+  {
+    "gameKey": "refinery",
+    "name": "Refinery",
+    "machineType": "REFINERY",
+    "powerMw": 30,
+    "enabled": true
+  },
+  {
+    "gameKey": "packager",
+    "name": "Packager",
+    "machineType": "PACKAGER",
+    "powerMw": 10,
+    "enabled": true
+  },
+  {
+    "gameKey": "blender",
+    "name": "Blender",
+    "machineType": "BLENDER",
+    "powerMw": 75,
+    "enabled": true
+  },
+  {
+    "gameKey": "particle_accelerator",
+    "name": "Particle Accelerator",
+    "machineType": "PARTICLE_ACCELERATOR",
+    "powerMw": 250,
+    "enabled": true
+  },
+  {
+    "gameKey": "converter",
+    "name": "Converter",
+    "machineType": "OTHER",
+    "powerMw": 250,
+    "enabled": true
+  },
+  {
+    "gameKey": "quantum_encoder",
+    "name": "Quantum Encoder",
+    "machineType": "OTHER",
+    "powerMw": 1000,
+    "enabled": true
+  }
+]

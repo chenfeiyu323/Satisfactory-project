@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
@@ -19,6 +19,10 @@ server:
   port: 8080
 
 app:
+  catalog:
+    import-on-startup: true
+    file-path: ./shared/zh-Hans.json
+    game-version: zh-Hans
   cors:
     allowed-origins: http://127.0.0.1:8080,http://localhost:8080
   sync:

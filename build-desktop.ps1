@@ -6,6 +6,7 @@ $backend = Join-Path $root 'satisfactory-factory-designer-backend'
 $buildDir = Join-Path $root 'desktop-build'
 $staticDir = Join-Path $backend 'src\main\resources\static'
 $releaseDir = Join-Path $root 'release'
+$catalogSource = Join-Path $root 'zh-Hans.json'
 
 function Invoke-BackendBuild {
     if (Get-Command mvn -ErrorAction SilentlyContinue) {
@@ -57,6 +58,14 @@ try {
         --dest $releaseDir `
         --java-options '-Dspring.profiles.active=desktop' `
         --java-options '-Dfile.encoding=UTF-8'
+
+    $releaseShared = Join-Path $releaseDir 'SatisfactoryFactoryDesigner\shared'
+    if (-not (Test-Path $releaseShared)) {
+        New-Item -ItemType Directory $releaseShared | Out-Null
+    }
+    if (Test-Path $catalogSource) {
+        Copy-Item $catalogSource (Join-Path $releaseShared 'zh-Hans.json') -Force
+    }
 
     Write-Host "Desktop package created in $releaseDir\SatisfactoryFactoryDesigner"
 }

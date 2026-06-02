@@ -1,0 +1,1118 @@
+[
+  {
+    "gameKey": "iron_ore",
+    "name": "Iron Ore",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "copper_ore",
+    "name": "Copper Ore",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "limestone",
+    "name": "Limestone",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "coal",
+    "name": "Coal",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "caterium_ore",
+    "name": "Caterium Ore",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "raw_quartz",
+    "name": "Raw Quartz",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "sulfur",
+    "name": "Sulfur",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "bauxite",
+    "name": "Bauxite",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "uranium",
+    "name": "Uranium",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "sam",
+    "name": "SAM",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "crude_oil",
+    "name": "Crude Oil",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "water",
+    "name": "Water",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "nitrogen_gas",
+    "name": "Nitrogen Gas",
+    "materialType": "GAS",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "iron_ingot",
+    "name": "Iron Ingot",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "iron_plate",
+    "name": "Iron Plate",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "iron_rod",
+    "name": "Iron Rod",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "screw",
+    "name": "Screw",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "copper_ingot",
+    "name": "Copper Ingot",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "copper_sheet",
+    "name": "Copper Sheet",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "wire",
+    "name": "Wire",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "cable",
+    "name": "Cable",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "concrete",
+    "name": "Concrete",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "reinforced_iron_plate",
+    "name": "Reinforced Iron Plate",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "rotor",
+    "name": "Rotor",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "modular_frame",
+    "name": "Modular Frame",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "steel_ingot",
+    "name": "Steel Ingot",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "steel_beam",
+    "name": "Steel Beam",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "steel_pipe",
+    "name": "Steel Pipe",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "encased_industrial_beam",
+    "name": "Encased Industrial Beam",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "stator",
+    "name": "Stator",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "motor",
+    "name": "Motor",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "heavy_modular_frame",
+    "name": "Heavy Modular Frame",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "caterium_ingot",
+    "name": "Caterium Ingot",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "quickwire",
+    "name": "Quickwire",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "ai_limiter",
+    "name": "AI Limiter",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "high_speed_connector",
+    "name": "High-Speed Connector",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "quartz_crystal",
+    "name": "Quartz Crystal",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "silica",
+    "name": "Silica",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "crystal_oscillator",
+    "name": "Crystal Oscillator",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "circuit_board",
+    "name": "Circuit Board",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "computer",
+    "name": "Computer",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "supercomputer",
+    "name": "Supercomputer",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "plastic",
+    "name": "Plastic",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "rubber",
+    "name": "Rubber",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "polymer_resin",
+    "name": "Polymer Resin",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "petroleum_coke",
+    "name": "Petroleum Coke",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "compacted_coal",
+    "name": "Compacted Coal",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "black_powder",
+    "name": "Black Powder",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "smokeless_powder",
+    "name": "Smokeless Powder",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "heavy_oil_residue",
+    "name": "Heavy Oil Residue",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "fuel",
+    "name": "Fuel",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "turbofuel",
+    "name": "Turbofuel",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "rocket_fuel",
+    "name": "Rocket Fuel",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "sulfuric_acid",
+    "name": "Sulfuric Acid",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "nitric_acid",
+    "name": "Nitric Acid",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "ionized_fuel",
+    "name": "Ionized Fuel",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "alumina_solution",
+    "name": "Alumina Solution",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "aluminum_scrap",
+    "name": "Aluminum Scrap",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "aluminum_ingot",
+    "name": "Aluminum Ingot",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "alclad_aluminum_sheet",
+    "name": "Alclad Aluminum Sheet",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "aluminum_casing",
+    "name": "Aluminum Casing",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "heat_sink",
+    "name": "Heat Sink",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "cooling_system",
+    "name": "Cooling System",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "battery",
+    "name": "Battery",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "radio_control_unit",
+    "name": "Radio Control Unit",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "fused_modular_frame",
+    "name": "Fused Modular Frame",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "turbo_motor",
+    "name": "Turbo Motor",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "electromagnetic_control_rod",
+    "name": "Electromagnetic Control Rod",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "uranium_fuel_rod",
+    "name": "Uranium Fuel Rod",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "uranium_waste",
+    "name": "Uranium Waste",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "non_fissile_uranium",
+    "name": "Non-Fissile Uranium",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "plutonium_pellet",
+    "name": "Plutonium Pellet",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "encased_plutonium_cell",
+    "name": "Encased Plutonium Cell",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "plutonium_fuel_rod",
+    "name": "Plutonium Fuel Rod",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "plutonium_waste",
+    "name": "Plutonium Waste",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": false,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "copper_powder",
+    "name": "Copper Powder",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "pressure_conversion_cube",
+    "name": "Pressure Conversion Cube",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "nuclear_pasta",
+    "name": "Nuclear Pasta",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "diamonds",
+    "name": "Diamonds",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "time_crystal",
+    "name": "Time Crystal",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "dark_matter_residue",
+    "name": "Dark Matter Residue",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "dark_matter_crystal",
+    "name": "Dark Matter Crystal",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "excited_photonic_matter",
+    "name": "Excited Photonic Matter",
+    "materialType": "FLUID",
+    "stackSize": null,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "reanimated_sam",
+    "name": "Reanimated SAM",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "sam_fluctuator",
+    "name": "SAM Fluctuator",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "ficsonium",
+    "name": "Ficsonium",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "ficsonium_fuel_rod",
+    "name": "Ficsonium Fuel Rod",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "empty_canister",
+    "name": "Empty Canister",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "empty_fluid_tank",
+    "name": "Empty Fluid Tank",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_water",
+    "name": "Packaged Water",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_oil",
+    "name": "Packaged Oil",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_fuel",
+    "name": "Packaged Fuel",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_heavy_oil_residue",
+    "name": "Packaged Heavy Oil Residue",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_turbofuel",
+    "name": "Packaged Turbofuel",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_rocket_fuel",
+    "name": "Packaged Rocket Fuel",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_alumina_solution",
+    "name": "Packaged Alumina Solution",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_sulfuric_acid",
+    "name": "Packaged Sulfuric Acid",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_nitric_acid",
+    "name": "Packaged Nitric Acid",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_nitrogen_gas",
+    "name": "Packaged Nitrogen Gas",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "packaged_ionized_fuel",
+    "name": "Packaged Ionized Fuel",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "smart_plating",
+    "name": "Smart Plating",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "versatile_framework",
+    "name": "Versatile Framework",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "automated_wiring",
+    "name": "Automated Wiring",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "modular_engine",
+    "name": "Modular Engine",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "adaptive_control_unit",
+    "name": "Adaptive Control Unit",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "assembly_director_system",
+    "name": "Assembly Director System",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "magnetic_field_generator",
+    "name": "Magnetic Field Generator",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "thermal_propulsion_rocket",
+    "name": "Thermal Propulsion Rocket",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "ai_expansion_server",
+    "name": "AI Expansion Server",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "biochemical_sculptor",
+    "name": "Biochemical Sculptor",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "ballistic_warp_drive",
+    "name": "Ballistic Warp Drive",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "portable_miner",
+    "name": "Portable Miner",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "power_shard",
+    "name": "Power Shard",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "blue_power_slug",
+    "name": "Blue Power Slug",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "yellow_power_slug",
+    "name": "Yellow Power Slug",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "purple_power_slug",
+    "name": "Purple Power Slug",
+    "materialType": "SOLID",
+    "stackSize": 50,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "solid_biofuel",
+    "name": "Solid Biofuel",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "biomass",
+    "name": "Biomass",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "wood",
+    "name": "Wood",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "leaves",
+    "name": "Leaves",
+    "materialType": "SOLID",
+    "stackSize": 500,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "mycelia",
+    "name": "Mycelia",
+    "materialType": "SOLID",
+    "stackSize": 200,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "fabric",
+    "name": "Fabric",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "uranium_pellet",
+    "name": "Uranium Pellet",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  },
+  {
+    "gameKey": "encased_uranium_cell",
+    "name": "Encased Uranium Cell",
+    "materialType": "SOLID",
+    "stackSize": 100,
+    "sinkable": true,
+    "enabled": true,
+    "description": null
+  }
+]
