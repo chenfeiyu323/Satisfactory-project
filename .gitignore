@@ -27,3 +27,7 @@ satisfactory-factory-designer-backend/target/
 satisfactory-factory-designer-frontend-angular-canvas/node_modules/
 satisfactory-factory-designer-frontend-angular-canvas/dist/
 satisfactory-factory-designer-frontend-angular-canvas/.angular/
+
+# Desktop packaging output
+desktop-build/
+release/

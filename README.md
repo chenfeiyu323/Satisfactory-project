@@ -28,6 +28,19 @@ Stop all services with [stop-local.bat](stop-local.bat).
 
 If you need to rebuild the EXE locally, run [launcher/build-launcher.bat](launcher/build-launcher.bat).
 
+## Desktop package for friends with no environment
+
+If you want the real zero-environment desktop version, build it with [build-desktop.ps1](build-desktop.ps1).
+
+The desktop package uses:
+
+- H2 local file database instead of MySQL
+- Angular static files bundled into the Spring Boot app
+- automatic browser launch on startup
+- `shared/satisfactory-save.json` for sync/import
+
+The generated app image is placed under `release/SatisfactoryFactoryDesigner/` and can be zipped and sent to your friend.
+
 ## Local development
 
 1. Start MySQL and the backend stack:
