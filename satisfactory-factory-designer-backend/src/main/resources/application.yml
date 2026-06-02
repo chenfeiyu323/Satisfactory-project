@@ -34,3 +34,7 @@ springdoc:
 app:
   cors:
     allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:}
+  sync:
+    auto-import-on-startup: ${APP_SYNC_AUTO_IMPORT_ON_STARTUP:false}
+    overwrite-on-import: ${APP_SYNC_OVERWRITE_ON_IMPORT:true}
+    save-file-path: ${APP_SYNC_SAVE_FILE_PATH:}

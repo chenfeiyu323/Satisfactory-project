@@ -10,6 +10,11 @@ Thumbs.db
 # Environment overrides
 .env
 .env.*
+!.env.example
+
+# Shared local save files
+shared/*.json
+!shared/.gitkeep
 
 # Logs
 *.log

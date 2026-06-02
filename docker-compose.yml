@@ -4,8 +4,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-password}
       MYSQL_DATABASE: ${MYSQL_DATABASE:-satisfactory_factory_designer}
-    ports:
-      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
@@ -19,8 +17,13 @@ services:
       DB_PASSWORD: ${DB_PASSWORD:-password}
       APP_CORS_ALLOWED_ORIGINS: ${APP_CORS_ALLOWED_ORIGINS:-http://localhost:4200,http://127.0.0.1:4200,http://localhost:80,http://127.0.0.1:80}
       PORT: ${PORT:-8080}
+      APP_SYNC_AUTO_IMPORT_ON_STARTUP: ${APP_SYNC_AUTO_IMPORT_ON_STARTUP:-true}
+      APP_SYNC_OVERWRITE_ON_IMPORT: ${APP_SYNC_OVERWRITE_ON_IMPORT:-true}
+      APP_SYNC_SAVE_FILE_PATH: ${APP_SYNC_SAVE_FILE_PATH:-/shared/satisfactory-save.json}
     ports:
       - "8080:8080"
+    volumes:
+      - ./shared:/shared
     depends_on:
       - mysql
 
