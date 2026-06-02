@@ -2,8 +2,8 @@ services:
   mysql:
     image: mysql:8.4
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: satisfactory_factory_designer
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-password}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-satisfactory_factory_designer}
     ports:
       - "3306:3306"
     volumes:
@@ -14,11 +14,11 @@ services:
     build:
       context: ./satisfactory-factory-designer-backend
     environment:
-      DB_URL: jdbc:mysql://mysql:3306/satisfactory_factory_designer?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-      DB_USERNAME: root
-      DB_PASSWORD: password
-      APP_CORS_ALLOWED_ORIGINS: http://localhost:4200,http://127.0.0.1:4200,http://localhost:80,http://127.0.0.1:80
-      PORT: 8080
+      DB_URL: ${DB_URL:-jdbc:mysql://mysql:3306/satisfactory_factory_designer?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+      DB_USERNAME: ${DB_USERNAME:-root}
+      DB_PASSWORD: ${DB_PASSWORD:-password}
+      APP_CORS_ALLOWED_ORIGINS: ${APP_CORS_ALLOWED_ORIGINS:-http://localhost:4200,http://127.0.0.1:4200,http://localhost:80,http://127.0.0.1:80}
+      PORT: ${PORT:-8080}
     ports:
       - "8080:8080"
     depends_on:
@@ -31,6 +31,7 @@ services:
       - "4200:80"
     depends_on:
       - backend
+
 
 volumes:
   mysql_data:
