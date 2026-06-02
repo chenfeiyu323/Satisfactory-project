@@ -1,0 +1,3016 @@
+[
+  {
+    "gameKey": "recipe_extract_iron_ore_mk1_normal",
+    "name": "Iron Ore Extraction Mk.1 Normal",
+    "machineKey": "miner",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [],
+    "outputs": [
+      {
+        "materialKey": "iron_ore",
+        "amountPerCycle": 60.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_extract_copper_ore_mk1_normal",
+    "name": "Copper Ore Extraction Mk.1 Normal",
+    "machineKey": "miner",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [],
+    "outputs": [
+      {
+        "materialKey": "copper_ore",
+        "amountPerCycle": 60.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_extract_limestone_mk1_normal",
+    "name": "Limestone Extraction Mk.1 Normal",
+    "machineKey": "miner",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [],
+    "outputs": [
+      {
+        "materialKey": "limestone",
+        "amountPerCycle": 60.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_extract_coal_mk1_normal",
+    "name": "Coal Extraction Mk.1 Normal",
+    "machineKey": "miner",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [],
+    "outputs": [
+      {
+        "materialKey": "coal",
+        "amountPerCycle": 60.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_extract_water",
+    "name": "Water Extraction",
+    "machineKey": "water_extractor",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [],
+    "outputs": [
+      {
+        "materialKey": "water",
+        "amountPerCycle": 120.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_extract_crude_oil_normal",
+    "name": "Crude Oil Extraction Normal",
+    "machineKey": "oil_extractor",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [],
+    "outputs": [
+      {
+        "materialKey": "crude_oil",
+        "amountPerCycle": 120.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_iron_ingot",
+    "name": "Iron Ingot",
+    "machineKey": "smelter",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ore",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_copper_ingot",
+    "name": "Copper Ingot",
+    "machineKey": "smelter",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_ore",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_concrete",
+    "name": "Concrete",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "limestone",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "concrete",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_caterium_ingot",
+    "name": "Caterium Ingot",
+    "machineKey": "smelter",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "caterium_ore",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "caterium_ingot",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_quartz_crystal",
+    "name": "Quartz Crystal",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 8.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "raw_quartz",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "quartz_crystal",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_silica",
+    "name": "Silica",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 8.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "raw_quartz",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "silica",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_iron_plate",
+    "name": "Iron Plate",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "iron_plate",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_iron_rod",
+    "name": "Iron Rod",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "iron_rod",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_screw",
+    "name": "Screw",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_rod",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "screw",
+        "amountPerCycle": 4.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_wire",
+    "name": "Wire",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "wire",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_cable",
+    "name": "Cable",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "wire",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "cable",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_copper_sheet",
+    "name": "Copper Sheet",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "copper_sheet",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_reinforced_iron_plate",
+    "name": "Reinforced Iron Plate",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 12.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_plate",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "screw",
+        "amountPerCycle": 12.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "reinforced_iron_plate",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_rotor",
+    "name": "Rotor",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 15.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_rod",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "screw",
+        "amountPerCycle": 25.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "rotor",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_modular_frame",
+    "name": "Modular Frame",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "reinforced_iron_plate",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "iron_rod",
+        "amountPerCycle": 12.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "modular_frame",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_steel_ingot",
+    "name": "Steel Ingot",
+    "machineKey": "foundry",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ore",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "coal",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "steel_ingot",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_steel_beam",
+    "name": "Steel Beam",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "steel_ingot",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "steel_beam",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_steel_pipe",
+    "name": "Steel Pipe",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "steel_ingot",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "steel_pipe",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_encased_industrial_beam",
+    "name": "Encased Industrial Beam",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 10.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "steel_beam",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "concrete",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "encased_industrial_beam",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_stator",
+    "name": "Stator",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 12.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "steel_pipe",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "wire",
+        "amountPerCycle": 8.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "stator",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_motor",
+    "name": "Motor",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 12.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "rotor",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "stator",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "motor",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_heavy_modular_frame",
+    "name": "Heavy Modular Frame",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 30.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "modular_frame",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "steel_pipe",
+        "amountPerCycle": 20.0
+      },
+      {
+        "materialKey": "encased_industrial_beam",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "screw",
+        "amountPerCycle": 120.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "heavy_modular_frame",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_quickwire",
+    "name": "Quickwire",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 5.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "caterium_ingot",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "quickwire",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_ai_limiter",
+    "name": "AI Limiter",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 12.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_sheet",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "quickwire",
+        "amountPerCycle": 20.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "ai_limiter",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_high_speed_connector",
+    "name": "High-Speed Connector",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 16.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "quickwire",
+        "amountPerCycle": 56.0
+      },
+      {
+        "materialKey": "cable",
+        "amountPerCycle": 10.0
+      },
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "high_speed_connector",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_circuit_board",
+    "name": "Circuit Board",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 8.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_sheet",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "plastic",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_computer",
+    "name": "Computer",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 24.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "cable",
+        "amountPerCycle": 8.0
+      },
+      {
+        "materialKey": "plastic",
+        "amountPerCycle": 16.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "computer",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_supercomputer",
+    "name": "Supercomputer",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 32.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "computer",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "ai_limiter",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "high_speed_connector",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "plastic",
+        "amountPerCycle": 28.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "supercomputer",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_crystal_oscillator",
+    "name": "Crystal Oscillator",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 120.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "quartz_crystal",
+        "amountPerCycle": 36.0
+      },
+      {
+        "materialKey": "cable",
+        "amountPerCycle": 28.0
+      },
+      {
+        "materialKey": "reinforced_iron_plate",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "crystal_oscillator",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_cast_screw",
+    "name": "Alternate: Cast Screw",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 24.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "screw",
+        "amountPerCycle": 20.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_steel_screw",
+    "name": "Alternate: Steel Screw",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 12.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "steel_beam",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "screw",
+        "amountPerCycle": 52.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_iron_wire",
+    "name": "Alternate: Iron Wire",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 24.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "wire",
+        "amountPerCycle": 9.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_pure_iron_ingot",
+    "name": "Alternate: Pure Iron Ingot",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 12.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ore",
+        "amountPerCycle": 7.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 13.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_iron_alloy_ingot",
+    "name": "Alternate: Iron Alloy Ingot",
+    "machineKey": "foundry",
+    "cycleTimeSeconds": 6.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ore",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "copper_ore",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_copper_alloy_ingot",
+    "name": "Alternate: Copper Alloy Ingot",
+    "machineKey": "foundry",
+    "cycleTimeSeconds": 6.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_ore",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "iron_ore",
+        "amountPerCycle": 2.5
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 10.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_pure_copper_ingot",
+    "name": "Alternate: Pure Copper Ingot",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 24.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_ore",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 15.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_solid_steel_ingot",
+    "name": "Alternate: Solid Steel Ingot",
+    "machineKey": "foundry",
+    "cycleTimeSeconds": 3.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ingot",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "coal",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "steel_ingot",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_coke_steel_ingot",
+    "name": "Alternate: Coke Steel Ingot",
+    "machineKey": "foundry",
+    "cycleTimeSeconds": 12.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_ore",
+        "amountPerCycle": 15.0
+      },
+      {
+        "materialKey": "petroleum_coke",
+        "amountPerCycle": 15.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "steel_ingot",
+        "amountPerCycle": 20.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_steel_rod",
+    "name": "Alternate: Steel Rod",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 5.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "steel_ingot",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "iron_rod",
+        "amountPerCycle": 4.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_stitched_iron_plate",
+    "name": "Alternate: Stitched Iron Plate",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 32.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_plate",
+        "amountPerCycle": 10.0
+      },
+      {
+        "materialKey": "wire",
+        "amountPerCycle": 20.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "reinforced_iron_plate",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_bolted_iron_plate",
+    "name": "Alternate: Bolted Iron Plate",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 12.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "iron_plate",
+        "amountPerCycle": 18.0
+      },
+      {
+        "materialKey": "screw",
+        "amountPerCycle": 50.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "reinforced_iron_plate",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_steeled_frame",
+    "name": "Alternate: Steeled Frame",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 60.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "reinforced_iron_plate",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "steel_pipe",
+        "amountPerCycle": 10.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "modular_frame",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_encased_industrial_pipe",
+    "name": "Alternate: Encased Industrial Pipe",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 15.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "steel_pipe",
+        "amountPerCycle": 7.0
+      },
+      {
+        "materialKey": "concrete",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "encased_industrial_beam",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_heavy_encased_frame",
+    "name": "Alternate: Heavy Encased Frame",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 64.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "modular_frame",
+        "amountPerCycle": 8.0
+      },
+      {
+        "materialKey": "encased_industrial_beam",
+        "amountPerCycle": 10.0
+      },
+      {
+        "materialKey": "steel_pipe",
+        "amountPerCycle": 36.0
+      },
+      {
+        "materialKey": "concrete",
+        "amountPerCycle": 22.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "heavy_modular_frame",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_caterium_circuit_board",
+    "name": "Alternate: Caterium Circuit Board",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 48.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "plastic",
+        "amountPerCycle": 10.0
+      },
+      {
+        "materialKey": "quickwire",
+        "amountPerCycle": 30.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 7.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_silicon_circuit_board",
+    "name": "Alternate: Silicon Circuit Board",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 24.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_sheet",
+        "amountPerCycle": 11.0
+      },
+      {
+        "materialKey": "silica",
+        "amountPerCycle": 11.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_caterium_computer",
+    "name": "Alternate: Caterium Computer",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 16.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 7.0
+      },
+      {
+        "materialKey": "quickwire",
+        "amountPerCycle": 28.0
+      },
+      {
+        "materialKey": "rubber",
+        "amountPerCycle": 12.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "computer",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_crystal_computer",
+    "name": "Alternate: Crystal Computer",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 36.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 8.0
+      },
+      {
+        "materialKey": "crystal_oscillator",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "computer",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_fused_wire",
+    "name": "Alternate: Fused Wire",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 20.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "caterium_ingot",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "wire",
+        "amountPerCycle": 30.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alt_fused_quickwire",
+    "name": "Alternate: Fused Quickwire",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 8.0,
+    "alternate": true,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "caterium_ingot",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "quickwire",
+        "amountPerCycle": 12.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_plastic",
+    "name": "Plastic",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "crude_oil",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "plastic",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "heavy_oil_residue",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_rubber",
+    "name": "Rubber",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "crude_oil",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "rubber",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "heavy_oil_residue",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_fuel",
+    "name": "Fuel",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "crude_oil",
+        "amountPerCycle": 6.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "fuel",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "polymer_resin",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_residual_plastic",
+    "name": "Residual Plastic",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "polymer_resin",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "plastic",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_residual_rubber",
+    "name": "Residual Rubber",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "polymer_resin",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "rubber",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_petroleum_coke",
+    "name": "Petroleum Coke",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "heavy_oil_residue",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "petroleum_coke",
+        "amountPerCycle": 12.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_residual_fuel",
+    "name": "Residual Fuel",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "heavy_oil_residue",
+        "amountPerCycle": 6.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "fuel",
+        "amountPerCycle": 4.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_compacted_coal",
+    "name": "Compacted Coal",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 12.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "coal",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "sulfur",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "compacted_coal",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_turbofuel",
+    "name": "Turbofuel",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 16.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "fuel",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "compacted_coal",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "turbofuel",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_black_powder",
+    "name": "Black Powder",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "coal",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "sulfur",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "black_powder",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_smokeless_powder",
+    "name": "Smokeless Powder",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "black_powder",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "heavy_oil_residue",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "smokeless_powder",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_packaged_water",
+    "name": "Packaged Water",
+    "machineKey": "packager",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "water",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "empty_canister",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "packaged_water",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_unpackaged_water",
+    "name": "Unpackage Water",
+    "machineKey": "packager",
+    "cycleTimeSeconds": 1.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "packaged_water",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "water",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "empty_canister",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_packaged_oil",
+    "name": "Packaged Oil",
+    "machineKey": "packager",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "crude_oil",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "empty_canister",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "packaged_oil",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_packaged_fuel",
+    "name": "Packaged Fuel",
+    "machineKey": "packager",
+    "cycleTimeSeconds": 3.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "fuel",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "empty_canister",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "packaged_fuel",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_unpackaged_fuel",
+    "name": "Unpackage Fuel",
+    "machineKey": "packager",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "packaged_fuel",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "fuel",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "empty_canister",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_packaged_turbofuel",
+    "name": "Packaged Turbofuel",
+    "machineKey": "packager",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "turbofuel",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "empty_canister",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "packaged_turbofuel",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_packaged_rocket_fuel",
+    "name": "Packaged Rocket Fuel",
+    "machineKey": "packager",
+    "cycleTimeSeconds": 1.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "rocket_fuel",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "empty_fluid_tank",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "packaged_rocket_fuel",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_rocket_fuel",
+    "name": "Rocket Fuel",
+    "machineKey": "blender",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "turbofuel",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "nitric_acid",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "rocket_fuel",
+        "amountPerCycle": 10.0
+      },
+      {
+        "materialKey": "compacted_coal",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_ionized_fuel",
+    "name": "Ionized Fuel",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 3.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "rocket_fuel",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "power_shard",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "ionized_fuel",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "compacted_coal",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alumina_solution",
+    "name": "Alumina Solution",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "bauxite",
+        "amountPerCycle": 12.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 18.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "alumina_solution",
+        "amountPerCycle": 12.0
+      },
+      {
+        "materialKey": "silica",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_aluminum_scrap",
+    "name": "Aluminum Scrap",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 1.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "alumina_solution",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "coal",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "aluminum_scrap",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_aluminum_ingot",
+    "name": "Aluminum Ingot",
+    "machineKey": "foundry",
+    "cycleTimeSeconds": 4.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "aluminum_scrap",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "silica",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "aluminum_ingot",
+        "amountPerCycle": 4.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_alclad_aluminum_sheet",
+    "name": "Alclad Aluminum Sheet",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "aluminum_ingot",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "alclad_aluminum_sheet",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_aluminum_casing",
+    "name": "Aluminum Casing",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "aluminum_ingot",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "aluminum_casing",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_heat_sink",
+    "name": "Heat Sink",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 8.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "alclad_aluminum_sheet",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "copper_sheet",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "heat_sink",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_sulfuric_acid",
+    "name": "Sulfuric Acid",
+    "machineKey": "refinery",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "sulfur",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "sulfuric_acid",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_nitric_acid",
+    "name": "Nitric Acid",
+    "machineKey": "blender",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "nitrogen_gas",
+        "amountPerCycle": 12.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "iron_plate",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "nitric_acid",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_cooling_system",
+    "name": "Cooling System",
+    "machineKey": "blender",
+    "cycleTimeSeconds": 10.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "heat_sink",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "rubber",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "nitrogen_gas",
+        "amountPerCycle": 25.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "cooling_system",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_battery",
+    "name": "Battery",
+    "machineKey": "blender",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "sulfuric_acid",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "alumina_solution",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "aluminum_casing",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "battery",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 3.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_radio_control_unit",
+    "name": "Radio Control Unit",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 48.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "aluminum_casing",
+        "amountPerCycle": 32.0
+      },
+      {
+        "materialKey": "crystal_oscillator",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "computer",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "radio_control_unit",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_fused_modular_frame",
+    "name": "Fused Modular Frame",
+    "machineKey": "blender",
+    "cycleTimeSeconds": 40.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "heavy_modular_frame",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "aluminum_casing",
+        "amountPerCycle": 50.0
+      },
+      {
+        "materialKey": "nitrogen_gas",
+        "amountPerCycle": 25.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "fused_modular_frame",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_turbo_motor",
+    "name": "Turbo Motor",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 32.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "cooling_system",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "radio_control_unit",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "motor",
+        "amountPerCycle": 4.0
+      },
+      {
+        "materialKey": "rubber",
+        "amountPerCycle": 24.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "turbo_motor",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_electromagnetic_control_rod",
+    "name": "Electromagnetic Control Rod",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 30.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "stator",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "ai_limiter",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "electromagnetic_control_rod",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_uranium_pellet",
+    "name": "Uranium Pellet",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "uranium",
+        "amountPerCycle": 10.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "uranium_pellet",
+        "amountPerCycle": 5.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_encased_uranium_cell",
+    "name": "Encased Uranium Cell",
+    "machineKey": "blender",
+    "cycleTimeSeconds": 12.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "uranium_pellet",
+        "amountPerCycle": 10.0
+      },
+      {
+        "materialKey": "concrete",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "sulfuric_acid",
+        "amountPerCycle": 8.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "encased_uranium_cell",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "sulfuric_acid",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_uranium_fuel_rod",
+    "name": "Uranium Fuel Rod",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 150.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "encased_uranium_cell",
+        "amountPerCycle": 50.0
+      },
+      {
+        "materialKey": "encased_industrial_beam",
+        "amountPerCycle": 3.0
+      },
+      {
+        "materialKey": "electromagnetic_control_rod",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "uranium_fuel_rod",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_non_fissile_uranium",
+    "name": "Non-Fissile Uranium",
+    "machineKey": "blender",
+    "cycleTimeSeconds": 24.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "uranium_waste",
+        "amountPerCycle": 15.0
+      },
+      {
+        "materialKey": "silica",
+        "amountPerCycle": 10.0
+      },
+      {
+        "materialKey": "nitric_acid",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "sulfuric_acid",
+        "amountPerCycle": 6.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "non_fissile_uranium",
+        "amountPerCycle": 20.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 6.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_plutonium_pellet",
+    "name": "Plutonium Pellet",
+    "machineKey": "particle_accelerator",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "non_fissile_uranium",
+        "amountPerCycle": 100.0
+      },
+      {
+        "materialKey": "uranium_waste",
+        "amountPerCycle": 25.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "plutonium_pellet",
+        "amountPerCycle": 30.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_encased_plutonium_cell",
+    "name": "Encased Plutonium Cell",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 12.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "plutonium_pellet",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "concrete",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "encased_plutonium_cell",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_plutonium_fuel_rod",
+    "name": "Plutonium Fuel Rod",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 240.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "encased_plutonium_cell",
+        "amountPerCycle": 30.0
+      },
+      {
+        "materialKey": "steel_beam",
+        "amountPerCycle": 18.0
+      },
+      {
+        "materialKey": "electromagnetic_control_rod",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "heat_sink",
+        "amountPerCycle": 10.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "plutonium_fuel_rod",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_copper_powder",
+    "name": "Copper Powder",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_ingot",
+        "amountPerCycle": 3.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "copper_powder",
+        "amountPerCycle": 0.5
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_pressure_conversion_cube",
+    "name": "Pressure Conversion Cube",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "fused_modular_frame",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "radio_control_unit",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "pressure_conversion_cube",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_nuclear_pasta",
+    "name": "Nuclear Pasta",
+    "machineKey": "particle_accelerator",
+    "cycleTimeSeconds": 120.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "copper_powder",
+        "amountPerCycle": 200.0
+      },
+      {
+        "materialKey": "pressure_conversion_cube",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "nuclear_pasta",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_reanimated_sam",
+    "name": "Reanimated SAM",
+    "machineKey": "constructor",
+    "cycleTimeSeconds": 6.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "sam",
+        "amountPerCycle": 4.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "reanimated_sam",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_sam_fluctuator",
+    "name": "SAM Fluctuator",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "reanimated_sam",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "wire",
+        "amountPerCycle": 50.0
+      },
+      {
+        "materialKey": "steel_pipe",
+        "amountPerCycle": 30.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "sam_fluctuator",
+        "amountPerCycle": 10.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_diamonds",
+    "name": "Diamonds",
+    "machineKey": "particle_accelerator",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "coal",
+        "amountPerCycle": 20.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "diamonds",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_time_crystal",
+    "name": "Time Crystal",
+    "machineKey": "converter",
+    "cycleTimeSeconds": 10.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "diamonds",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "time_crystal",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_dark_matter_crystal",
+    "name": "Dark Matter Crystal",
+    "machineKey": "converter",
+    "cycleTimeSeconds": 2.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "diamonds",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "dark_matter_residue",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "dark_matter_crystal",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_smart_plating",
+    "name": "Smart Plating",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 30.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "reinforced_iron_plate",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "rotor",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "smart_plating",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_versatile_framework",
+    "name": "Versatile Framework",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 24.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "modular_frame",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "steel_beam",
+        "amountPerCycle": 12.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "versatile_framework",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_automated_wiring",
+    "name": "Automated Wiring",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 24.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "stator",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "cable",
+        "amountPerCycle": 20.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "automated_wiring",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_modular_engine",
+    "name": "Modular Engine",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "motor",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "rubber",
+        "amountPerCycle": 15.0
+      },
+      {
+        "materialKey": "smart_plating",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "modular_engine",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_adaptive_control_unit",
+    "name": "Adaptive Control Unit",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "automated_wiring",
+        "amountPerCycle": 7.5
+      },
+      {
+        "materialKey": "circuit_board",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "heavy_modular_frame",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "computer",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "adaptive_control_unit",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_assembly_director_system",
+    "name": "Assembly Director System",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 80.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "adaptive_control_unit",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "supercomputer",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "assembly_director_system",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_magnetic_field_generator",
+    "name": "Magnetic Field Generator",
+    "machineKey": "assembler",
+    "cycleTimeSeconds": 120.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "versatile_framework",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "electromagnetic_control_rod",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "magnetic_field_generator",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_thermal_propulsion_rocket",
+    "name": "Thermal Propulsion Rocket",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 120.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "modular_engine",
+        "amountPerCycle": 5.0
+      },
+      {
+        "materialKey": "turbo_motor",
+        "amountPerCycle": 2.0
+      },
+      {
+        "materialKey": "cooling_system",
+        "amountPerCycle": 6.0
+      },
+      {
+        "materialKey": "fused_modular_frame",
+        "amountPerCycle": 2.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "thermal_propulsion_rocket",
+        "amountPerCycle": 2.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_ai_expansion_server",
+    "name": "AI Expansion Server",
+    "machineKey": "quantum_encoder",
+    "cycleTimeSeconds": 15.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "magnetic_field_generator",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "supercomputer",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "sam_fluctuator",
+        "amountPerCycle": 1.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "ai_expansion_server",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_biochemical_sculptor",
+    "name": "Biochemical Sculptor",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 120.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "assembly_director_system",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "fused_modular_frame",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "water",
+        "amountPerCycle": 20.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "biochemical_sculptor",
+        "amountPerCycle": 1.0
+      }
+    ]
+  },
+  {
+    "gameKey": "recipe_ballistic_warp_drive",
+    "name": "Ballistic Warp Drive",
+    "machineKey": "manufacturer",
+    "cycleTimeSeconds": 60.0,
+    "alternate": false,
+    "source": "OFFICIAL_CURATED_SEED",
+    "gameVersion": "curated-v1",
+    "enabled": true,
+    "inputs": [
+      {
+        "materialKey": "thermal_propulsion_rocket",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "nuclear_pasta",
+        "amountPerCycle": 1.0
+      },
+      {
+        "materialKey": "sam_fluctuator",
+        "amountPerCycle": 5.0
+      }
+    ],
+    "outputs": [
+      {
+        "materialKey": "ballistic_warp_drive",
+        "amountPerCycle": 1.0
+      }
+    ]
+  }
+]

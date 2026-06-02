@@ -1,0 +1,24 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment overrides
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Backend build output
+satisfactory-factory-designer-backend/target/
+
+# Frontend build output
+satisfactory-factory-designer-frontend-angular-canvas/node_modules/
+satisfactory-factory-designer-frontend-angular-canvas/dist/
+satisfactory-factory-designer-frontend-angular-canvas/.angular/

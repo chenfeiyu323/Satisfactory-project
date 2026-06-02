@@ -1,0 +1,383 @@
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">SF</div>
+      <div>
+        <h1>幸福工厂设计器</h1>
+        <p>{{ api.baseUrl }}</p>
+      </div>
+    </div>
+
+    <form class="create-card" (ngSubmit)="createFactory()">
+      <input [(ngModel)]="createFactoryName" name="createFactoryName" placeholder="新工厂名称" />
+      <select [(ngModel)]="createFactoryType" name="createFactoryType">
+        <option *ngFor="let item of factoryTypeOptions" [ngValue]="item.value">{{ item.label }}</option>
+      </select>
+      <button type="submit">新建</button>
+    </form>
+
+    <div class="sidebar-section-title">工厂列表</div>
+    <div class="factory-list">
+      <button
+        *ngFor="let factory of factories; trackBy: trackById"
+        class="factory-item"
+        [class.active]="factory.id === selectedFactoryId"
+        type="button"
+        (click)="selectFactory(factory.id)"
+      >
+        <span class="dot" [class.on]="factory.enabled"></span>
+        <span class="factory-item-main">
+          <strong>{{ factory.name }}</strong>
+          <small>{{ factoryTypeLabel(factory.factoryType) }} · 传送带 Mk.{{ factory.maxBeltLevel || '-' }} · 管道 Mk.{{ factory.maxPipeLevel || '-' }}</small>
+        </span>
+      </button>
+    </div>
+
+    <button class="secondary full" type="button" (click)="seedAll()">重新导入基础数据</button>
+  </aside>
+
+  <main class="main">
+    <div *ngIf="toast" class="toast" [class.toast-ok]="toast.type === 'ok'" [class.toast-error]="toast.type === 'error'">{{ toast.text }}</div>
+
+    <div *ngIf="!selectedFactory" class="empty-page">
+      <h2>先创建一个工厂</h2>
+      <p>左侧新建工厂后，就可以添加生产桶、物资线和外联输入。</p>
+    </div>
+
+    <ng-container *ngIf="selectedFactory">
+      <section class="factory-header">
+        <div>
+          <div class="header-title-line">
+            <input class="factory-name-input" [(ngModel)]="factoryDraft.name" name="factoryName" />
+            <span [class]="statusClass(calculation?.overallStatus)">{{ statusText(calculation?.overallStatus) }}</span>
+            <span *ngIf="loading" class="muted">计算中...</span>
+          </div>
+          <p class="muted">只保存设计数据，需求 / 产出 / 净值 / 等级建议由后端实时计算。</p>
+        </div>
+
+        <div class="factory-settings">
+          <label>
+            类型
+            <select [(ngModel)]="factoryDraft.factoryType" name="factoryType">
+              <option *ngFor="let item of factoryTypeOptions" [ngValue]="item.value">{{ item.label }}</option>
+            </select>
+          </label>
+          <label class="check-line small-check"><input type="checkbox" [(ngModel)]="factoryDraft.enabled" name="factoryEnabled" /> 启用</label>
+          <label>最高传送带<input type="number" min="1" step="1" [(ngModel)]="factoryDraft.maxBeltLevel" name="maxBelt" /></label>
+          <label>最高管道<input type="number" min="1" step="1" [(ngModel)]="factoryDraft.maxPipeLevel" name="maxPipe" /></label>
+          <button type="button" (click)="saveFactory()">保存</button>
+          <button type="button" class="secondary" (click)="refreshCurrentFactory()">刷新</button>
+          <button type="button" class="secondary" (click)="copyFactory()">复制厂</button>
+          <button type="button" class="secondary" (click)="saveSnapshot()">保存版本</button>
+          <button type="button" class="danger" (click)="deleteFactory()">删除</button>
+        </div>
+      </section>
+
+      <section class="canvas-card canvas-version">
+        <div class="canvas-toolbar">
+          <div>
+            <h2>工厂画布</h2>
+            <p>底部是物资线描述模块，向右扩展；每个物资向上形成纵向总线柱。生产桶从底部开始向上摆放，桶上方连产出、下方连进料。</p>
+          </div>
+          <div class="canvas-actions">
+            <form class="inline-form" (ngSubmit)="createBucket()">
+              <input [(ngModel)]="newBucketName" name="newBucketName" placeholder="生产桶名称" />
+              <button type="submit">添加桶</button>
+            </form>
+            <form class="inline-form material-line-form" (ngSubmit)="createBusLine()">
+              <select [ngModel]="newLineMaterialType" (ngModelChange)="selectNewLineMaterialType($event)" name="newLineMaterialType">
+                <option [ngValue]="null">选择门类</option>
+                <option *ngFor="let type of materialTypeOptions" [ngValue]="type.value">{{ type.label }}</option>
+              </select>
+              <select [(ngModel)]="newLineMaterialId" name="newLineMaterialId" [disabled]="!newLineMaterialType">
+                <option [ngValue]="null">选择具体物品（{{ availableMaterialsForLine(newLineMaterialType).length }}）</option>
+                <option *ngFor="let material of availableMaterialsForLine(newLineMaterialType); trackBy: trackById" [ngValue]="material.id">{{ materialName(material.name, material.gameKey) }}</option>
+              </select>
+              <button type="submit" [disabled]="newLineMaterialId === null">添加线</button>
+            </form>
+            <div class="zoom-controls">
+              <button type="button" class="secondary" (click)="zoomOut()">-</button>
+              <button type="button" class="secondary" (click)="resetZoom()">{{ fmt(canvasZoom * 100, 0) }}%</button>
+              <button type="button" class="secondary" (click)="zoomIn()">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-viewport">
+          <div class="canvas-scaled-frame" [style.width.px]="scaledCanvasWidth" [style.height.px]="scaledCanvasHeight">
+            <div
+              class="factory-canvas"
+              [style.width.px]="canvasWidth"
+              [style.height.px]="canvasHeight"
+              [style.transform]="'scale(' + canvasZoom + ')'"
+              (pointermove)="moveBucketDrag($event); moveLineDrag($event)"
+              (pointerup)="finishBucketDrag(); finishLineDrag()"
+              (pointerleave)="finishBucketDrag(); finishLineDrag()"
+            >
+              <div class="canvas-background-grid"></div>
+              <svg class="connector-layer" [attr.viewBox]="'0 0 ' + canvasWidth + ' ' + canvasHeight" preserveAspectRatio="none">
+                <defs>
+                  <marker id="arrow-output" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" class="arrow-output-shape"></path>
+                  </marker>
+                  <marker id="arrow-input" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" class="arrow-input-shape"></path>
+                  </marker>
+                </defs>
+                <path
+                  *ngFor="let connection of canvasConnections(); trackBy: trackConnection"
+                  [attr.d]="connection.d"
+                  class="connector-path"
+                  [class.connector-input]="connection.kind === 'input'"
+                  [class.connector-output]="connection.kind === 'output'"
+                  [attr.marker-end]="connection.kind === 'output' ? 'url(#arrow-output)' : 'url(#arrow-input)'"
+                ></path>
+              </svg>
+
+              <div class="canvas-label bucket-label">生产桶区</div>
+              <div class="canvas-label line-label" [style.top.px]="lineLabelTop">底部物资线描述区</div>
+
+              <ng-container *ngFor="let line of busLines; let i = index; trackBy: trackById">
+                <button
+                  type="button"
+                  class="bus-column-card"
+                  [class.dragging]="lineDragState?.lineId === line.id"
+                  [class.selected]="selectionKind === 'line' && selectedId === line.id"
+                  [class.line-red]="getCalc(line.id)?.status === 'RED'"
+                  [class.line-yellow]="getCalc(line.id)?.status === 'YELLOW'"
+                  [class.line-green]="getCalc(line.id)?.status === 'GREEN'"
+                  [class.line-gray]="!getCalc(line.id) || getCalc(line.id)?.status === 'GRAY'"
+                  [style.left.px]="lineX(line, i)"
+                  [style.top.px]="lineCardTop"
+                  (pointerdown)="startLineDrag(line, i, $event)"
+                  (pointermove)="moveLineDrag($event)"
+                  (pointerup)="finishLineDrag()"
+                  (click)="openLineFromClick(line, $event)"
+                >
+                  <span class="line-meter"><span [style.height.%]="lineMeterHeight(line)"></span></span>
+                  <span class="line-card-title">
+                    <strong>{{ line.name === line.materialName ? materialName(line.materialName) : lineLikeName(line.name || line.materialName) }}</strong>
+                    <small>{{ materialType(line.materialType) }}<ng-container *ngIf="line.externalEnabled"> · 外联</ng-container></small>
+                  </span>
+                  <span class="line-card-stats">
+                    <span>需 {{ fmt(getCalc(line.id)?.localDemand) }}</span>
+                    <span>本 {{ fmt(getCalc(line.id)?.localOutput) }}</span>
+                    <span [class.warn-text]="!!getCalc(line.id)?.externalInput && !!getCalc(line.id)?.transportAdvice?.overCurrentMax">外 {{ fmt(getCalc(line.id)?.externalInput) }}</span>
+                    <span [class.bad-text]="(getCalc(line.id)?.net ?? 0) < 0" [class.good-text]="(getCalc(line.id)?.net ?? 0) >= 0">净 {{ fmt(getCalc(line.id)?.net) }}</span>
+                  </span>
+                </button>
+                <div
+                  class="bus-pillar"
+                  [class.line-red]="getCalc(line.id)?.status === 'RED'"
+                  [class.line-yellow]="getCalc(line.id)?.status === 'YELLOW'"
+                  [class.line-green]="getCalc(line.id)?.status === 'GREEN'"
+                  [class.line-gray]="!getCalc(line.id) || getCalc(line.id)?.status === 'GRAY'"
+                  [style.left.px]="pillarX(line, i) - 4"
+                  [style.top.px]="pillarTop"
+                  [style.height.px]="pillarHeight"
+                ></div>
+              </ng-container>
+
+              <article
+                *ngFor="let bucket of buckets; let i = index; trackBy: trackById"
+                class="canvas-bucket-card"
+                [class.selected]="selectionKind === 'bucket' && selectedId === bucket.id"
+                [class.disabled]="!bucket.enabled"
+                [style.left.px]="bucketX(bucket, i)"
+                [style.top.px]="bucketY(bucket, i)"
+                (pointerdown)="startBucketDrag(bucket, i, $event)"
+                (click)="openBucketFromClick(bucket, $event)"
+              >
+                <div class="bucket-anchor anchor-output">产出</div>
+                <div class="bucket-anchor anchor-input">进料</div>
+                <div class="card-topline">
+                  <div>
+                    <strong>{{ bucket.name }}</strong>
+                    <small>{{ summarizeBucket(bucket).activeNodeCount }} 个启用节点 · 可拖动</small>
+                  </div>
+                  <label class="toggle" (click)="$event.stopPropagation()">
+                    <input type="checkbox" [checked]="bucket.enabled" (change)="toggleBucket(bucket, $event)" />
+                    启用
+                  </label>
+                </div>
+                <div class="chip-group compact-chips">
+                  <span *ngFor="let item of summarizeBucket(bucket).outputs.slice(0, 2)" class="chip chip-out">产 {{ materialName(item.materialName) }} {{ fmt(item.amount) }}/min</span>
+                  <span *ngFor="let item of summarizeBucket(bucket).inputs.slice(0, 2)" class="chip chip-in">吃 {{ materialName(item.materialName) }} {{ fmt(item.amount) }}/min</span>
+                  <span *ngIf="summarizeBucket(bucket).inputs.length + summarizeBucket(bucket).outputs.length === 0" class="muted">点开添加生产建筑节点</span>
+                </div>
+              </article>
+
+              <div *ngIf="buckets.length === 0" class="canvas-empty bucket-empty">还没有生产桶</div>
+              <div *ngIf="busLines.length === 0" class="canvas-empty line-empty">还没有物资线。启用桶后会自动生成，也可以手动添加。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div *ngIf="selectedBucket as bucket" class="modal-backdrop" (click)="closeDetail()">
+        <section class="detail-modal bucket-modal" (click)="$event.stopPropagation()">
+          <div class="panel-head"><h3>生产桶详情</h3><button type="button" class="icon" (click)="closeDetail()">×</button></div>
+          <label>名称<input [(ngModel)]="bucketDraft.name" name="bucketName" /></label>
+          <label>描述<textarea [(ngModel)]="bucketDraft.description" name="bucketDescription"></textarea></label>
+          <label class="check-line"><input type="checkbox" [(ngModel)]="bucketDraft.enabled" name="bucketEnabled" />启用后才参与统计</label>
+          <div class="button-row"><button type="button" (click)="saveBucket()">保存桶</button><button type="button" class="danger" (click)="deleteBucket()">删除桶</button></div>
+
+          <hr />
+          <h4>新增生产建筑节点</h4>
+          <form class="node-form" (ngSubmit)="createNode()">
+            <div class="four-cols">
+              <label>
+                物资门类
+                <select [ngModel]="newNodeProductMaterialType" (ngModelChange)="selectNewNodeProductType($event)" name="newNodeProductMaterialType">
+                  <option [ngValue]="null">选择门类</option>
+                  <option *ngFor="let type of materialTypeOptions" [ngValue]="type.value">{{ type.label }}</option>
+                </select>
+              </label>
+              <label>
+                目标产品
+                <select [ngModel]="newNodeProductMaterialId" (ngModelChange)="selectNewNodeProduct($event)" name="newNodeProductMaterialId" [disabled]="!newNodeProductMaterialType">
+                  <option [ngValue]="null">选择产品</option>
+                  <option *ngFor="let material of productMaterialsByType(newNodeProductMaterialType); trackBy: trackById" [ngValue]="material.id">{{ materialName(material.name, material.gameKey) }}</option>
+                </select>
+              </label>
+              <label>
+                生产建筑
+                <select [ngModel]="newNodeMachineId" (ngModelChange)="selectNewNodeMachine($event)" name="newNodeMachineId" [disabled]="!newNodeProductMaterialId">
+                  <option [ngValue]="null">选择建筑</option>
+                  <option *ngFor="let machine of machineOptionsForProduct(newNodeProductMaterialId)" [ngValue]="machine.machineId">{{ machine.label }}</option>
+                </select>
+              </label>
+              <label>
+                配方
+                <select [(ngModel)]="newNodeDraft.recipeId" name="newNodeRecipeId">
+                  <option *ngFor="let recipe of recipesForProductAndMachine(newNodeProductMaterialId, newNodeMachineId); trackBy: trackById" [ngValue]="recipe.id">{{ recipeLabel(recipe) }}</option>
+                </select>
+              </label>
+            </div>
+            <small class="recipe-preview">输入 {{ recipeInputsText(newNodeDraft.recipeId) }} · 输出 {{ recipeOutputsText(newNodeDraft.recipeId) }}</small>
+            <div class="three-cols">
+              <label>机器数<input type="number" step="1" min="1" [(ngModel)]="newNodeDraft.machineCount" name="newNodeMachineCount" /></label>
+              <label>倍率%<input type="number" step="1" min="0" [(ngModel)]="newNodeDraft.clockPercent" name="newNodeClock" /></label>
+              <label>增幅<input type="number" step="0.1" min="0" [(ngModel)]="newNodeDraft.outputMultiplier" name="newNodeMultiplier" /></label>
+            </div>
+            <button type="submit" [disabled]="!newNodeDraft.recipeId">添加节点</button>
+          </form>
+
+          <div class="node-list">
+            <article *ngFor="let node of selectedBucketNodes; trackBy: trackById" class="node-card" [class.disabled]="!nodeDrafts[node.id].enabled">
+              <div class="four-cols">
+                <label>
+                  门类
+                  <select [ngModel]="nodeProductMaterialTypes[node.id]" (ngModelChange)="selectNodeProductType(node.id, $event)" [name]="'type-' + node.id">
+                    <option [ngValue]="null">选择门类</option>
+                    <option *ngFor="let type of materialTypeOptions" [ngValue]="type.value">{{ type.label }}</option>
+                  </select>
+                </label>
+                <label>
+                  产品
+                  <select [ngModel]="nodeProductMaterialIds[node.id]" (ngModelChange)="selectNodeProduct(node.id, $event)" [name]="'product-' + node.id">
+                    <option [ngValue]="null">选择产品</option>
+                    <option *ngFor="let material of productMaterialsByType(nodeProductMaterialTypes[node.id]); trackBy: trackById" [ngValue]="material.id">{{ materialName(material.name, material.gameKey) }}</option>
+                  </select>
+                </label>
+                <label>
+                  建筑
+                  <select [ngModel]="nodeMachineIds[node.id]" (ngModelChange)="selectNodeMachine(node.id, $event)" [name]="'machine-type-' + node.id">
+                    <option [ngValue]="null">选择建筑</option>
+                    <option *ngFor="let machine of machineOptionsForProduct(nodeProductMaterialIds[node.id])" [ngValue]="machine.machineId">{{ machine.label }}</option>
+                  </select>
+                </label>
+                <label>
+                  配方
+                  <select [(ngModel)]="nodeDrafts[node.id].recipeId" [name]="'recipe-' + node.id">
+                    <option *ngFor="let recipe of recipesForProductAndMachine(nodeProductMaterialIds[node.id], nodeMachineIds[node.id]); trackBy: trackById" [ngValue]="recipe.id">{{ recipeLabel(recipe) }}</option>
+                  </select>
+                </label>
+              </div>
+              <small>
+                {{ machineName(recipeById(nodeDrafts[node.id].recipeId)?.machineName) }} ·
+                输入 {{ recipeInputsText(nodeDrafts[node.id].recipeId) }} ·
+                输出 {{ recipeOutputsText(nodeDrafts[node.id].recipeId) }}
+              </small>
+              <div class="three-cols">
+                <label>机器<input type="number" step="1" min="1" [(ngModel)]="nodeDrafts[node.id].machineCount" [name]="'machine-' + node.id" /></label>
+                <label>倍率<input type="number" step="1" min="0" [(ngModel)]="nodeDrafts[node.id].clockPercent" [name]="'clock-' + node.id" /></label>
+                <label>增幅<input type="number" step="0.1" min="0" [(ngModel)]="nodeDrafts[node.id].outputMultiplier" [name]="'multi-' + node.id" /></label>
+              </div>
+              <label class="check-line"><input type="checkbox" [(ngModel)]="nodeDrafts[node.id].enabled" [name]="'enabled-' + node.id" />启用节点</label>
+              <div class="button-row"><button type="button" (click)="saveNode(node)">保存</button><button type="button" class="danger" (click)="deleteNode(node)">删除</button></div>
+            </article>
+            <p *ngIf="selectedBucketNodes.length === 0" class="muted">暂无节点。先选产品，再选配方，启用桶后会自动同步对应物资线。</p>
+          </div>
+        </section>
+      </div>
+
+      <div *ngIf="selectedLine as line" class="modal-backdrop" (click)="closeDetail()">
+        <section class="detail-modal line-modal" (click)="$event.stopPropagation()">
+          <div class="panel-head"><h3>物资线详情</h3><button type="button" class="icon" (click)="closeDetail()">×</button></div>
+          <div class="line-summary">
+            <strong>{{ materialName(line.materialName) }}</strong>
+            <span>{{ materialType(line.materialType) }}</span>
+            <span [class]="statusClass(selectedLineCalculation?.status)">{{ statusText(selectedLineCalculation?.status) }}</span>
+          </div>
+
+          <label>线名称<input [(ngModel)]="lineDraft.name" name="lineName" /></label>
+          <label>描述<textarea [(ngModel)]="lineDraft.description" name="lineDescription"></textarea></label>
+          <label>手动修正<input type="number" step="0.1" [(ngModel)]="lineDraft.offsetAmount" name="lineOffset" /></label>
+          <label class="check-line"><input type="checkbox" [(ngModel)]="lineDraft.visibleToOtherFactories" name="visibleToOtherFactories" />允许被其他厂看见</label>
+          <label class="check-line"><input type="checkbox" [(ngModel)]="lineDraft.externalEnabled" name="externalEnabled" />标记为外联输出线</label>
+          <div class="button-row"><button type="button" (click)="saveLine()">保存线</button><button type="button" class="danger" (click)="deleteLine()">删除线</button></div>
+
+          <hr />
+          <h4>实时统计</h4>
+          <div class="stat-grid">
+            <span>需求</span><strong>{{ fmt(selectedLineCalculation?.localDemand) }}/min</strong>
+            <span>本地产出</span><strong>{{ fmt(selectedLineCalculation?.localOutput) }}/min</strong>
+            <span>外厂输入</span><strong>{{ fmt(selectedLineCalculation?.externalInput) }}/min</strong>
+            <span>手动修正</span><strong>{{ fmt(selectedLineCalculation?.offset) }}/min</strong>
+            <span>净值</span><strong [class.bad-text]="(selectedLineCalculation?.net ?? 0) < 0" [class.good-text]="(selectedLineCalculation?.net ?? 0) >= 0">{{ fmt(selectedLineCalculation?.net) }}/min</strong>
+          </div>
+          <p *ngIf="selectedLineCalculation?.transportAdvice" [class.warning-box]="selectedLineCalculation?.transportAdvice?.overCurrentMax" [class.ok-box]="!selectedLineCalculation?.transportAdvice?.overCurrentMax">{{ transportAdvice(selectedLineCalculation?.transportAdvice) }}</p>
+          <p *ngFor="let warning of selectedLineCalculation?.warnings || []" class="warning-box">{{ warningText(warning) }}</p>
+
+          <hr />
+          <h4>外厂输入</h4>
+          <div class="connect-box">
+            <select [(ngModel)]="selectedSourceId" name="selectedSourceId">
+              <option [ngValue]="null">选择匹配的外联输出线</option>
+              <option *ngFor="let option of externalOptions" [ngValue]="option.sourceBusLineId">{{ externalOption(option) }}</option>
+            </select>
+            <button type="button" [disabled]="selectedSourceId === null" (click)="connectExternal()">连接</button>
+          </div>
+          <p *ngIf="externalOptions.length === 0" class="muted">没有可用来源。只有其他厂中同物品、同类型、已启用外联、净值为正且未被占用的线会显示。</p>
+          <div class="connection-list">
+            <div *ngFor="let connection of incomingConnectionsForSelectedLine" class="connection-item">
+              <span>{{ connectionText(connection) }}</span>
+              <button type="button" class="secondary" (click)="disconnect(connection.id)">解绑</button>
+            </div>
+          </div>
+
+          <hr />
+          <h4>来源 / 消耗追踪</h4>
+          <div class="trace-list" *ngIf="selectedLineCalculation?.producers?.length; else noProducer">
+            <strong>由这些节点产出</strong>
+            <span *ngFor="let item of selectedLineCalculation?.producers">{{ lineLikeName(item.sourceName) }} · {{ fmt(item.amount) }}/min</span>
+          </div>
+          <ng-template #noProducer><p class="muted">由这些节点产出：无</p></ng-template>
+
+          <div class="trace-list" *ngIf="selectedLineCalculation?.consumers?.length; else noConsumer">
+            <strong>被这些节点消耗</strong>
+            <span *ngFor="let item of selectedLineCalculation?.consumers">{{ lineLikeName(item.sourceName) }} · {{ fmt(item.amount) }}/min</span>
+          </div>
+          <ng-template #noConsumer><p class="muted">被这些节点消耗：无</p></ng-template>
+
+          <div class="trace-list" *ngIf="selectedLineCalculation?.externalSources?.length; else noExternal">
+            <strong>外联来源</strong>
+            <span *ngFor="let item of selectedLineCalculation?.externalSources">{{ lineLikeName(item.sourceName) }} · {{ fmt(item.amount) }}/min</span>
+          </div>
+          <ng-template #noExternal><p class="muted">外联来源：无</p></ng-template>
+        </section>
+      </div>
+    </ng-container>
+  </main>
+</div>

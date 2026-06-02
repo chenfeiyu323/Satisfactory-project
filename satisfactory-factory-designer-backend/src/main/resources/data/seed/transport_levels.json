@@ -1,0 +1,58 @@
+[
+  {
+    "transportType": "BELT",
+    "level": 1,
+    "name": "Mk.1 Conveyor Belt",
+    "capacityPerMin": 60,
+    "sortOrder": 1
+  },
+  {
+    "transportType": "BELT",
+    "level": 2,
+    "name": "Mk.2 Conveyor Belt",
+    "capacityPerMin": 120,
+    "sortOrder": 2
+  },
+  {
+    "transportType": "BELT",
+    "level": 3,
+    "name": "Mk.3 Conveyor Belt",
+    "capacityPerMin": 270,
+    "sortOrder": 3
+  },
+  {
+    "transportType": "BELT",
+    "level": 4,
+    "name": "Mk.4 Conveyor Belt",
+    "capacityPerMin": 480,
+    "sortOrder": 4
+  },
+  {
+    "transportType": "BELT",
+    "level": 5,
+    "name": "Mk.5 Conveyor Belt",
+    "capacityPerMin": 780,
+    "sortOrder": 5
+  },
+  {
+    "transportType": "BELT",
+    "level": 6,
+    "name": "Mk.6 Conveyor Belt",
+    "capacityPerMin": 1200,
+    "sortOrder": 6
+  },
+  {
+    "transportType": "PIPE",
+    "level": 1,
+    "name": "Mk.1 Pipeline",
+    "capacityPerMin": 300,
+    "sortOrder": 1
+  },
+  {
+    "transportType": "PIPE",
+    "level": 2,
+    "name": "Mk.2 Pipeline",
+    "capacityPerMin": 600,
+    "sortOrder": 2
+  }
+]
