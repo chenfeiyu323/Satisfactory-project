@@ -97,6 +97,7 @@ export class DesignerPageComponent implements OnInit {
   connections: ExternalConnection[] = [];
   externalOptions: ExternalSourceOption[] = [];
   loading = false;
+  actionBusy = false;
   toast: Toast = null;
 
   readonly bucketCardWidth = 300;
@@ -147,6 +148,7 @@ export class DesignerPageComponent implements OnInit {
   }
 
   async run(action: () => Promise<void>, okText?: string): Promise<void> {
+    this.actionBusy = true;
     try {
       this.toast = null;
       await action();
@@ -154,6 +156,8 @@ export class DesignerPageComponent implements OnInit {
     } catch (error) {
       this.toast = { type: 'error', text: this.formatError(error) };
       console.error(error);
+    } finally {
+      this.actionBusy = false;
     }
   }
 

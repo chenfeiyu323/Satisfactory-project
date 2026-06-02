@@ -8,12 +8,12 @@
       </div>
     </div>
 
-    <form class="create-card" (ngSubmit)="createFactory()">
+    <form class="create-card" (ngSubmit)="$event.preventDefault(); createFactory()">
       <input [(ngModel)]="createFactoryName" name="createFactoryName" placeholder="新工厂名称" />
       <select [(ngModel)]="createFactoryType" name="createFactoryType">
         <option *ngFor="let item of factoryTypeOptions" [ngValue]="item.value">{{ item.label }}</option>
       </select>
-      <button type="submit">新建</button>
+      <button type="submit" [disabled]="actionBusy">{{ actionBusy ? '创建中...' : '新建' }}</button>
     </form>
 
     <div class="sidebar-section-title">工厂列表</div>
@@ -33,7 +33,7 @@
       </button>
     </div>
 
-    <button class="secondary full" type="button" (click)="seedAll()">重新导入基础数据</button>
+    <button class="secondary full" type="button" [disabled]="actionBusy" (click)="seedAll()">{{ actionBusy ? '处理中...' : '重新导入基础数据' }}</button>
   </aside>
 
   <main class="main">
