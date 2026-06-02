@@ -8,7 +8,7 @@ CREATE TABLE materials (
     enabled BOOLEAN NOT NULL DEFAULT TRUE,
     description TEXT NULL,
     CONSTRAINT uk_material_game_key UNIQUE (game_key)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE machines (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -18,7 +18,7 @@ CREATE TABLE machines (
     power_mw DOUBLE NULL,
     enabled BOOLEAN NOT NULL DEFAULT TRUE,
     CONSTRAINT uk_machine_game_key UNIQUE (game_key)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE recipes (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -32,7 +32,7 @@ CREATE TABLE recipes (
     enabled BOOLEAN NOT NULL DEFAULT TRUE,
     CONSTRAINT uk_recipe_game_key UNIQUE (game_key),
     CONSTRAINT fk_recipes_machine FOREIGN KEY (machine_id) REFERENCES machines(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE recipe_inputs (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -42,7 +42,7 @@ CREATE TABLE recipe_inputs (
     CONSTRAINT uk_recipe_input_material UNIQUE (recipe_id, material_id),
     CONSTRAINT fk_recipe_inputs_recipe FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
     CONSTRAINT fk_recipe_inputs_material FOREIGN KEY (material_id) REFERENCES materials(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE recipe_outputs (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -52,7 +52,7 @@ CREATE TABLE recipe_outputs (
     CONSTRAINT uk_recipe_output_material UNIQUE (recipe_id, material_id),
     CONSTRAINT fk_recipe_outputs_recipe FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
     CONSTRAINT fk_recipe_outputs_material FOREIGN KEY (material_id) REFERENCES materials(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE transport_levels (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -62,7 +62,7 @@ CREATE TABLE transport_levels (
     capacity_per_min DOUBLE NOT NULL,
     sort_order INT NOT NULL DEFAULT 0,
     CONSTRAINT uk_transport_type_level UNIQUE (transport_type, level)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE factories (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -73,8 +73,8 @@ CREATE TABLE factories (
     max_pipe_level INT NOT NULL DEFAULT 1,
     description TEXT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 
 CREATE TABLE production_buckets (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -87,7 +87,7 @@ CREATE TABLE production_buckets (
     collapsed BOOLEAN NOT NULL DEFAULT FALSE,
     sort_order INT NOT NULL DEFAULT 0,
     CONSTRAINT fk_buckets_factory FOREIGN KEY (factory_id) REFERENCES factories(id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE production_nodes (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -103,7 +103,7 @@ CREATE TABLE production_nodes (
     sort_order INT NOT NULL DEFAULT 0,
     CONSTRAINT fk_nodes_bucket FOREIGN KEY (bucket_id) REFERENCES production_buckets(id) ON DELETE CASCADE,
     CONSTRAINT fk_nodes_recipe FOREIGN KEY (recipe_id) REFERENCES recipes(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE bus_lines (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -120,7 +120,7 @@ CREATE TABLE bus_lines (
     CONSTRAINT uk_bus_line_factory_material UNIQUE (factory_id, material_id),
     CONSTRAINT fk_bus_lines_factory FOREIGN KEY (factory_id) REFERENCES factories(id) ON DELETE CASCADE,
     CONSTRAINT fk_bus_lines_material FOREIGN KEY (material_id) REFERENCES materials(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE external_connections (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -131,7 +131,7 @@ CREATE TABLE external_connections (
     CONSTRAINT uk_external_source_bus_line UNIQUE (source_bus_line_id),
     CONSTRAINT fk_external_source FOREIGN KEY (source_bus_line_id) REFERENCES bus_lines(id) ON DELETE CASCADE,
     CONSTRAINT fk_external_target FOREIGN KEY (target_bus_line_id) REFERENCES bus_lines(id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE INDEX idx_external_target ON external_connections(target_bus_line_id);
 CREATE INDEX idx_bus_lines_factory ON bus_lines(factory_id);
@@ -144,4 +144,4 @@ CREATE TABLE factory_snapshots (
     snapshot_json JSON NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_snapshots_factory FOREIGN KEY (factory_id) REFERENCES factories(id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);

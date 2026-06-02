@@ -13,7 +13,7 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
 
   flyway:
-    locations: classpath:db/migration
+    locations: classpath:db/migration-desktop
 
 server:
   port: 8080

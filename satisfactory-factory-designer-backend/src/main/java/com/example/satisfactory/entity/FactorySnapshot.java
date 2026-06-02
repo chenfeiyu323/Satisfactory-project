@@ -17,7 +17,7 @@ public class FactorySnapshot {
     @Column(nullable = false, length = 160)
     private String name;
 
-    @Column(name = "snapshot_json", nullable = false, columnDefinition = "CLOB")
+    @Column(name = "snapshot_json", nullable = false, columnDefinition = "JSON")
     private String snapshotJson;
 
     @Column(name = "created_at", nullable = false, updatable = false)
